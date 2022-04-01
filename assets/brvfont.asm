@@ -1,0 +1,883 @@
+BRVFontPalette0:
+  .word 0x0000
+  .word 0x0EEE
+  .word 0x0EEE
+  .word 0x0EEE
+  .word 0x0EEE
+  .word 0x0EEE
+  .word 0x0EEE
+  .word 0x0EEE
+  .word 0x0EEE
+  .word 0x0EEE
+  .word 0x0EEE
+  .word 0x0EEE
+  .word 0x0EEE
+  .word 0x0EEE
+  .word 0x0EEE
+  .word 0x0EEE
+
+BRVFontImage0:
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00000000
+
+  .long 0x00011000
+  .long 0x00011000
+  .long 0x00011000
+  .long 0x00011000
+  .long 0x00011000
+  .long 0x00000000
+  .long 0x00011000
+  .long 0x00000000
+
+  .long 0x01101100
+  .long 0x01101100
+  .long 0x01101100
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00000000
+
+  .long 0x00110110
+  .long 0x00110110
+  .long 0x01111111
+  .long 0x00110110
+  .long 0x01111111
+  .long 0x00110110
+  .long 0x00110110
+  .long 0x00000000
+
+  .long 0x00001100
+  .long 0x00111111
+  .long 0x01101000
+  .long 0x00111110
+  .long 0x00001011
+  .long 0x01111110
+  .long 0x00011000
+  .long 0x00000000
+
+  .long 0x01100000
+  .long 0x01100110
+  .long 0x00001100
+  .long 0x00011000
+  .long 0x00110000
+  .long 0x01100110
+  .long 0x00000110
+  .long 0x00000000
+
+  .long 0x00111000
+  .long 0x01101100
+  .long 0x01101100
+  .long 0x00111000
+  .long 0x01101101
+  .long 0x01100110
+  .long 0x00111011
+  .long 0x00000000
+
+  .long 0x00001100
+  .long 0x00011000
+  .long 0x00110000
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00000000
+
+  .long 0x00001100
+  .long 0x00011000
+  .long 0x00110000
+  .long 0x00110000
+  .long 0x00110000
+  .long 0x00011000
+  .long 0x00001100
+  .long 0x00000000
+
+  .long 0x00110000
+  .long 0x00011000
+  .long 0x00001100
+  .long 0x00001100
+  .long 0x00001100
+  .long 0x00011000
+  .long 0x00110000
+  .long 0x00000000
+
+  .long 0x00000000
+  .long 0x00011000
+  .long 0x01111110
+  .long 0x00111100
+  .long 0x01111110
+  .long 0x00011000
+  .long 0x00000000
+  .long 0x00000000
+
+  .long 0x00000000
+  .long 0x00011000
+  .long 0x00011000
+  .long 0x01111110
+  .long 0x00011000
+  .long 0x00011000
+  .long 0x00000000
+  .long 0x00000000
+
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00011000
+  .long 0x00011000
+  .long 0x00110000
+
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x01111110
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00000000
+
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00011000
+  .long 0x00011000
+  .long 0x00000000
+
+  .long 0x00000000
+  .long 0x00000110
+  .long 0x00001100
+  .long 0x00011000
+  .long 0x00110000
+  .long 0x01100000
+  .long 0x00000000
+  .long 0x00000000
+
+  .long 0x00111100
+  .long 0x01100110
+  .long 0x01101110
+  .long 0x01111110
+  .long 0x01110110
+  .long 0x01100110
+  .long 0x00111100
+  .long 0x00000000
+
+  .long 0x00011000
+  .long 0x00111000
+  .long 0x00011000
+  .long 0x00011000
+  .long 0x00011000
+  .long 0x00011000
+  .long 0x01111110
+  .long 0x00000000
+
+  .long 0x00111100
+  .long 0x01100110
+  .long 0x00000110
+  .long 0x00001100
+  .long 0x00011000
+  .long 0x00110000
+  .long 0x01111110
+  .long 0x00000000
+
+  .long 0x00111100
+  .long 0x01100110
+  .long 0x00000110
+  .long 0x00011100
+  .long 0x00000110
+  .long 0x01100110
+  .long 0x00111100
+  .long 0x00000000
+
+  .long 0x00001100
+  .long 0x00011100
+  .long 0x00111100
+  .long 0x01101100
+  .long 0x01111110
+  .long 0x00001100
+  .long 0x00001100
+  .long 0x00000000
+
+  .long 0x01111110
+  .long 0x01100000
+  .long 0x01111100
+  .long 0x00000110
+  .long 0x00000110
+  .long 0x01100110
+  .long 0x00111100
+  .long 0x00000000
+
+  .long 0x00011100
+  .long 0x00110000
+  .long 0x01100000
+  .long 0x01111100
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x00111100
+  .long 0x00000000
+
+  .long 0x01111110
+  .long 0x00000110
+  .long 0x00001100
+  .long 0x00011000
+  .long 0x00110000
+  .long 0x00110000
+  .long 0x00110000
+  .long 0x00000000
+
+  .long 0x00111100
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x00111100
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x00111100
+  .long 0x00000000
+
+  .long 0x00111100
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x00111110
+  .long 0x00000110
+  .long 0x00001100
+  .long 0x00111000
+  .long 0x00000000
+
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00011000
+  .long 0x00011000
+  .long 0x00000000
+  .long 0x00011000
+  .long 0x00011000
+  .long 0x00000000
+
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00011000
+  .long 0x00011000
+  .long 0x00000000
+  .long 0x00011000
+  .long 0x00011000
+  .long 0x00110000
+
+  .long 0x00001100
+  .long 0x00011000
+  .long 0x00110000
+  .long 0x01100000
+  .long 0x00110000
+  .long 0x00011000
+  .long 0x00001100
+  .long 0x00000000
+
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x01111110
+  .long 0x00000000
+  .long 0x01111110
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00000000
+
+  .long 0x00110000
+  .long 0x00011000
+  .long 0x00001100
+  .long 0x00000110
+  .long 0x00001100
+  .long 0x00011000
+  .long 0x00110000
+  .long 0x00000000
+
+  .long 0x00111100
+  .long 0x01100110
+  .long 0x00001100
+  .long 0x00011000
+  .long 0x00011000
+  .long 0x00000000
+  .long 0x00011000
+  .long 0x00000000
+
+  .long 0x00111100
+  .long 0x01100110
+  .long 0x01101110
+  .long 0x01101010
+  .long 0x01101110
+  .long 0x01100000
+  .long 0x00111100
+  .long 0x00000000
+
+  .long 0x00111100
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x01111110
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x00000000
+
+  .long 0x01111100
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x01111100
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x01111100
+  .long 0x00000000
+
+  .long 0x00111100
+  .long 0x01100110
+  .long 0x01100000
+  .long 0x01100000
+  .long 0x01100000
+  .long 0x01100110
+  .long 0x00111100
+  .long 0x00000000
+
+  .long 0x01111000
+  .long 0x01101100
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x01101100
+  .long 0x01111000
+  .long 0x00000000
+
+  .long 0x01111110
+  .long 0x01100000
+  .long 0x01100000
+  .long 0x01111100
+  .long 0x01100000
+  .long 0x01100000
+  .long 0x01111110
+  .long 0x00000000
+
+  .long 0x01111110
+  .long 0x01100000
+  .long 0x01100000
+  .long 0x01111100
+  .long 0x01100000
+  .long 0x01100000
+  .long 0x01100000
+  .long 0x00000000
+
+  .long 0x00111100
+  .long 0x01100110
+  .long 0x01100000
+  .long 0x01101110
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x00111100
+  .long 0x00000000
+
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x01111110
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x00000000
+
+  .long 0x01111110
+  .long 0x00011000
+  .long 0x00011000
+  .long 0x00011000
+  .long 0x00011000
+  .long 0x00011000
+  .long 0x01111110
+  .long 0x00000000
+
+  .long 0x00111110
+  .long 0x00001100
+  .long 0x00001100
+  .long 0x00001100
+  .long 0x00001100
+  .long 0x01101100
+  .long 0x00111000
+  .long 0x00000000
+
+  .long 0x01100110
+  .long 0x01101100
+  .long 0x01111000
+  .long 0x01110000
+  .long 0x01111000
+  .long 0x01101100
+  .long 0x01100110
+  .long 0x00000000
+
+  .long 0x01100000
+  .long 0x01100000
+  .long 0x01100000
+  .long 0x01100000
+  .long 0x01100000
+  .long 0x01100000
+  .long 0x01111110
+  .long 0x00000000
+
+  .long 0x01100011
+  .long 0x01110111
+  .long 0x01111111
+  .long 0x01101011
+  .long 0x01101011
+  .long 0x01100011
+  .long 0x01100011
+  .long 0x00000000
+
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x01110110
+  .long 0x01111110
+  .long 0x01101110
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x00000000
+
+  .long 0x00111100
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x00111100
+  .long 0x00000000
+
+  .long 0x01111100
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x01111100
+  .long 0x01100000
+  .long 0x01100000
+  .long 0x01100000
+  .long 0x00000000
+
+  .long 0x00111100
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x01101010
+  .long 0x01101100
+  .long 0x00110110
+  .long 0x00000000
+
+  .long 0x01111100
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x01111100
+  .long 0x01101100
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x00000000
+
+  .long 0x00111100
+  .long 0x01100110
+  .long 0x01100000
+  .long 0x00111100
+  .long 0x00000110
+  .long 0x01100110
+  .long 0x00111100
+  .long 0x00000000
+
+  .long 0x01111110
+  .long 0x00011000
+  .long 0x00011000
+  .long 0x00011000
+  .long 0x00011000
+  .long 0x00011000
+  .long 0x00011000
+  .long 0x00000000
+
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x00111100
+  .long 0x00000000
+
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x00111100
+  .long 0x00011000
+  .long 0x00000000
+
+  .long 0x01100011
+  .long 0x01101011
+  .long 0x01101011
+  .long 0x01111111
+  .long 0x01111111
+  .long 0x01111111
+  .long 0x00110110
+  .long 0x00000000
+
+  .long 0x01100110
+  .long 0x01111110
+  .long 0x00111100
+  .long 0x00011000
+  .long 0x00111100
+  .long 0x01111110
+  .long 0x01100110
+  .long 0x00000000
+
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x01111110
+  .long 0x00111110
+  .long 0x00000110
+  .long 0x00111110
+  .long 0x00000000
+
+  .long 0x01111111
+  .long 0x01111110
+  .long 0x00000110
+  .long 0x00001100
+  .long 0x00011000
+  .long 0x00110000
+  .long 0x01111111
+  .long 0x00000000
+
+  .long 0x01111100
+  .long 0x01100000
+  .long 0x01100000
+  .long 0x01100000
+  .long 0x01100000
+  .long 0x01100000
+  .long 0x01111100
+  .long 0x00000000
+
+  .long 0x00000000
+  .long 0x01100000
+  .long 0x00110000
+  .long 0x00011000
+  .long 0x00001100
+  .long 0x00000110
+  .long 0x00000000
+  .long 0x00000000
+
+  .long 0x00111110
+  .long 0x00000110
+  .long 0x00000110
+  .long 0x00000110
+  .long 0x00000110
+  .long 0x00000110
+  .long 0x00111110
+  .long 0x00000000
+
+  .long 0x00000000
+  .long 0x00011000
+  .long 0x00111100
+  .long 0x01100110
+  .long 0x01000010
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00000000
+
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x01111110
+  .long 0x00000000
+  .long 0x00000000
+
+  .long 0x00110000
+  .long 0x00011000
+  .long 0x00001100
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00000000
+
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00111100
+  .long 0x00000110
+  .long 0x00111110
+  .long 0x01100110
+  .long 0x00111110
+  .long 0x00000000
+
+  .long 0x01100000
+  .long 0x01100000
+  .long 0x01111100
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x01111100
+  .long 0x00000000
+
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00111100
+  .long 0x01100110
+  .long 0x01100000
+  .long 0x01100110
+  .long 0x00111100
+  .long 0x00000000
+
+  .long 0x00000110
+  .long 0x00000110
+  .long 0x00111110
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x00111110
+  .long 0x00000000
+
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00111100
+  .long 0x01100110
+  .long 0x01111110
+  .long 0x01100000
+  .long 0x00111100
+  .long 0x00000000
+
+  .long 0x00011100
+  .long 0x00110000
+  .long 0x00110000
+  .long 0x01111100
+  .long 0x00110000
+  .long 0x00110000
+  .long 0x00110000
+  .long 0x00000000
+
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00111110
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x00111110
+  .long 0x00000110
+  .long 0x00111100
+
+  .long 0x01100000
+  .long 0x01100000
+  .long 0x01111100
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x00000000
+
+  .long 0x00011000
+  .long 0x00000000
+  .long 0x00111000
+  .long 0x00011000
+  .long 0x00011000
+  .long 0x00011000
+  .long 0x00111100
+  .long 0x00000000
+
+  .long 0x00011000
+  .long 0x00000000
+  .long 0x00111000
+  .long 0x00011000
+  .long 0x00011000
+  .long 0x00011000
+  .long 0x00011000
+  .long 0x01110000
+
+  .long 0x01100000
+  .long 0x01100000
+  .long 0x01100110
+  .long 0x01101100
+  .long 0x01111000
+  .long 0x01101100
+  .long 0x01100110
+  .long 0x00000000
+
+  .long 0x00111000
+  .long 0x00011000
+  .long 0x00011000
+  .long 0x00011000
+  .long 0x00011000
+  .long 0x00011000
+  .long 0x00111100
+  .long 0x00000000
+
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00110110
+  .long 0x01111111
+  .long 0x01101011
+  .long 0x01101011
+  .long 0x01100011
+  .long 0x00000000
+
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x01111100
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x00000000
+
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00111100
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x00111100
+  .long 0x00000000
+
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x01111100
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x01111100
+  .long 0x01100000
+  .long 0x01100000
+
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00111110
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x00111110
+  .long 0x00000110
+  .long 0x00000111
+
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x01101100
+  .long 0x01110110
+  .long 0x01100000
+  .long 0x01100000
+  .long 0x01100000
+  .long 0x00000000
+
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00111110
+  .long 0x01100000
+  .long 0x00111100
+  .long 0x00000110
+  .long 0x01111100
+  .long 0x00000000
+
+  .long 0x00110000
+  .long 0x00110000
+  .long 0x01111100
+  .long 0x00110000
+  .long 0x00110000
+  .long 0x00110000
+  .long 0x00011100
+  .long 0x00000000
+
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x00111110
+  .long 0x00000000
+
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x00111100
+  .long 0x00011000
+  .long 0x00000000
+
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x01100011
+  .long 0x01101011
+  .long 0x01101011
+  .long 0x01111111
+  .long 0x00110110
+  .long 0x00000000
+
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x01100110
+  .long 0x00111100
+  .long 0x00011000
+  .long 0x00111100
+  .long 0x01100110
+  .long 0x00000000
+
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x01100110
+  .long 0x00111110
+  .long 0x00000110
+  .long 0x00111100
+
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x01111110
+  .long 0x00001100
+  .long 0x00011000
+  .long 0x00110000
+  .long 0x01111110
+  .long 0x00000000
+
+  .long 0x00111100
+  .long 0x01100000
+  .long 0x01100000
+  .long 0x01110000
+  .long 0x01100000
+  .long 0x01100000
+  .long 0x00111100
+  .long 0x00000000
+
+  .long 0x00000000
+  .long 0x00010000
+  .long 0x00010000
+  .long 0x00010000
+  .long 0x00010000
+  .long 0x00010000
+  .long 0x00010000
+  .long 0x00000000
+
+  .long 0x00111100
+  .long 0x00000110
+  .long 0x00000110
+  .long 0x00001110
+  .long 0x00000110
+  .long 0x00000110
+  .long 0x00111100
+  .long 0x00000000
+
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00100000
+  .long 0x01010110
+  .long 0x00001000
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00000000
+
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00000000
+  .long 0x00000000
+
