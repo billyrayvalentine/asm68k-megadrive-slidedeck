@@ -50,3 +50,6 @@ Use ```make``` to build the rom
 Requires GNU Assembler a.k.a. GNU AS / GAS and requires GNU Linker for m68k.
 
 These are known to be available in the default repos for SuSELeap and Ubuntu.
+
+# Download
+Binary releases can be downloaded from [releases](https://github.com/billyrayvalentine/asm68k-megadrive-slidedeck/releases)
