@@ -6,11 +6,7 @@ Simple engine to display simple slides for presentation.
 Slides can be progressed by setting a timer or by pressing any button on the
 joypad.
 
-Each slide must have a picture of 256x168.  This leaves room for upto 32x9 text
-chars beneath the picture.  (288 chars)
-
 All 95 printable ASCII are implemented.
-
 
 Each slide image has one palette on one plane and is therefor limited a maximum
 of 16 colours.
