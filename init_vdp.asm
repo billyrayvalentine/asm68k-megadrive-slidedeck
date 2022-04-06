@@ -26,7 +26,7 @@ init_vdp:
     * For the Mode 2 Register:
     * Enable Display (bit 6), Enable V blank interupt (bit 5),
     * Enable DMA (bit 4), Enable Enable PAL (V30 cells (bit 3))
-    move.w  #VDP_REG_MODE2      | 0b01111100, (a0)
+    move.w  #VDP_REG_MODE2      | 0b01110100, (a0)
     move.w  #VDP_REG_PLANEA     | 0x30, (a0) /* 0xC000 */
     move.w  #VDP_REG_WINDOW     | 0x2c, (a0) /* 0xB000 */
     move.w  #VDP_REG_PLANEB     | 0x07, (a0) /* 0xE000 */
@@ -34,9 +34,11 @@ init_vdp:
     move.w  #VDP_REG_BGCOL      | 0b00000000, (a0)
     move.w  #VDP_REG_H_INT      | 0b00001000, (a0)
     move.w  #VDP_REG_MODE3      | 0b00000000, (a0)
-    move.w  #VDP_REG_MODE4      | 0b00000000, (a0) /* H32 mode */
+    move.w  #VDP_REG_MODE4      | 0b00000000, (a0) /* H40 mode */
+    *move.w  #VDP_REG_MODE4      | 0b10000001, (a0) /* H40 mode */
     move.w  #VDP_REG_HSCROLL    | 0x2b, (a0) /* 0xAC00 */
     move.w  #VDP_REG_INCR       | 0b00000010, (a0) /* 0x02 */
+    *move.w  #VDP_REG_SIZE       | 0b00000001, (a0) /* 64x32 tiles */
     move.w  #VDP_REG_SIZE       | 0b00000000, (a0) /* 32x32 tiles */
     move.w  #VDP_REG_WINX       | 0b00000000, (a0)
     move.w  #VDP_REG_WINY       | 0b00000000, (a0)

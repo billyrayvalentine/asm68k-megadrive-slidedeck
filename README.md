@@ -7,8 +7,10 @@ Slides can be progressed by setting a timer or by pressing any button on the
 joypad.
 
 Each slide must have a picture of 256x168.  This leaves room for upto 32x9 text
-chars beneath the picture.  (288 chars) A minimal but regular set of ASCII characters are
-available and can be used.
+chars beneath the picture.  (288 chars)
+
+All 95 printable ASCII are implemented.
+
 
 Each slide image has one palette on one plane and is therefor limited a maximum
 of 16 colours.
@@ -34,6 +36,13 @@ The assembler expects the file ```assets/slide_data.asm``` to contain the labels
 ```SlideDataStart``` and ```SlideDataEnd```
 
 Between these labels one of more slides must be defined in the following format and order:
+
+Slide header = 4 bytes total
+
+bytes 00 - 01 = Size of image in images tiles.  Can be set to 0 when no image
+used.
+
+bytes 01 - 02 = unused but must be set.
 
 32 bytes that define the colour palette
 

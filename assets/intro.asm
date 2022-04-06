@@ -1,3 +1,6 @@
+* a comment
+.word 672
+.word 0
   .word 0x0000
   .word 0x06CE
   .word 0x04AE

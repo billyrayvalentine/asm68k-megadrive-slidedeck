@@ -1,3 +1,7 @@
+* Header = 8 bytes
+* bytes 0-1 is the picture size in tiles
+.word 672
+.word 0
   .word 0x0000
   .word 0x0EEE
   .word 0x0CCC
@@ -6062,4 +6066,4 @@
   .long 0xEEEFB333
   .long 0xEEEFE333
 
-  .asciz "                                This Slidedeck tool is written  in pure 68k assembly.           Each slide comprises of an      256x168 pixel image with a 16   colour palette and up to 288    characters of text. Slides can  be progressed by pressing any   button on the control pad, or... "
+  .asciz "                                This Slidedeck tool is written  in pure 68k assembly.           Each slide can display text and/or a 16 colour image.  "

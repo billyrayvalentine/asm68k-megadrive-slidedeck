@@ -1,3 +1,5 @@
+.word 672
+.word 0
   .word 0x0000
   .word 0x0EEE
   .word 0x0ACE

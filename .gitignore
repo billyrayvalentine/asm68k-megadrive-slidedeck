@@ -1,4 +1,6 @@
 /nvram
 /cfg
+/snap
 *.bin
 *.o
+mamedebug.txt

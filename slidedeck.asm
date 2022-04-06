@@ -48,13 +48,13 @@ cpu_entrypoint:
     dbra    d0, 1b
 
     * If SLIDESHOW_MODE_COUNT > 0 the set RAM_GAME_MODE = 1
-    move.w #SLIDESHOW_MODE_COUNT, d5
-    cmpi.b #0, d5
-    beq 1f
-    move.b #GAME_SLIDESHOW_MODE, RAM_GAME_MODE
+    move.w  #SLIDESHOW_MODE_COUNT, d5
+    tst     d5
+    beq     1f
+    move.b  #GAME_SLIDESHOW_MODE, RAM_GAME_MODE
     * Move the delay value to the current count so not to delay loading the
     * first slide
-    move.w #SLIDESHOW_MODE_COUNT, RAM_VBLANK_COUNTER
+    move.w  #SLIDESHOW_MODE_COUNT, RAM_VBLANK_COUNTER
 
 1:
     * Set the RAM_SLIDE_POINTER to the beginning of the slide data
@@ -106,7 +106,7 @@ forever:
         move.b  RAM_BUTTON_PRESS_COUNT, d7
 
         * Check for anything pressed and increment counter
-        cmpi.b  #0, RAM_CONTROLLER_1
+        tst.b   RAM_CONTROLLER_1
         beq     1f
         addq    #1, d7
         move.b  d7, RAM_BUTTON_PRESS_COUNT
@@ -126,13 +126,26 @@ done:
 draw_scene:
 /*
  * Load a scene from ROM
+ * use d0 store the 4 bytes of the slide header data
  * use a1 the point to the slide data
 
  * For some reason this won't work if the palette is set to #2
  * Load the image Pallete as palette #1
+ *
+ * d4 is maintained all the way through this function to keep track of the
+ * number of tiles loaded
 */
+    move.l  #0, d3
+    move.l  #0, d4
 
+    * Load header into D0.
     move.l  RAM_SLIDE_POINTER, a1
+    move.l  (a1)+, d0
+    swap    d0
+
+    * If tile count is zero skip to load_text
+    tst.w   d0
+    beq.b  load_text
 
     * Load image pallete
     move.l  #0xC0000000, VDP_CTRL_PORT
@@ -141,46 +154,81 @@ draw_scene:
 1:  move.w  (a1)+, VDP_DATA_PORT
     dbra    d2, 1b
 
+
     * Load image tiles after the font tiles
+    * Get the number of tiles from d0 and multiple by 8 and subtract 1 for
+    * the total number of tiles bytes to load
     move.l  #0x4C000000, VDP_CTRL_PORT
-    move.w  #IMAGE_TILE_COUNT * 8 -1, d2
+    move.w  d0, d2
+    lsl.w   #3, d2
+    subi.w  #1, d2
 
 1:  move.l  (a1)+, VDP_DATA_PORT
     dbra    d2, 1b
 
+
     * Set image table in plane B - use palette #1
     * The tile ID = n + FONT_TILE_COUNT
+    * Plane is 64 tiles wide but the display resolution is only 40 so skip 24
+    * tiles every row (48 bytes)
+    * use d2 for the tile id
+    * use d3 is the last tile id to load (total number of tiles + font tiles already loaded)
     move.l  #0x60000003, VDP_CTRL_PORT
     move.w  #0b0000000000000000 + FONT_TILE_COUNT, d2
+    move.w  d0, d3
+    addi.w  #FONT_TILE_COUNT, d3
 
 1:  move.w  d2, VDP_DATA_PORT
-    addq    #1, d2
-    cmpi.w  #IMAGE_TILE_COUNT + FONT_TILE_COUNT, d2
+    addq.w  #1, d2
+    addq.w  #1, d4
+    cmp.w   d3, d2
     bne     1b
 
-    * The text tiles are still in VDP RAM so clear these with blank tiles
-    * use D2
-    * Skip 786 tiles - not sure why this isn't 786
-    move.l  #0x45400003, VDP_CTRL_PORT
-    move.w  #SCENE_TEXT_LENGTH -1, d2
-1:  move.w  #0x00, VDP_DATA_PORT
-    dbra    d2, 1b
-
-    * Print the text to the screen
+    load_text:
+    * Load the ASCII values from the slide data
+    * The tile id for the char is the ASCII code - 0x20
     * Use palette #1
+    * Use d3 to count the total number of titles loaded this slide so we can blank the rest
+    * of the scene with empty tiles
+
+    * if image size == 0, reset VDP address to load at the start of the plane
+    * table
+    tst     d0
+    bne     1f
+    move.l  #0x60000003, VDP_CTRL_PORT
+1:
     move.w  #0x2000, d0
-    * Skip 786 tiles
-    move.l  #0x45400003, VDP_CTRL_PORT
 
     * loop through the bytes in a0 which are ascii values until 0x00
 1:  move.b  (a1)+, d0
-    cmpi.b  #0,    d0
+    tst.b   d0
     beq     2f
 
     subi.b  #0x20, d0
     move.w  d0, VDP_DATA_PORT
+    addq.w  #1, d4
     bra     1b
 2:
+
+    * If total number of tiles written to this scene is less than the screen
+    * blank the rest of the screen with tile #0
+    cmpi.w  #TOTAL_SCREEN_SIZE_TILES+1, d4
+    bge      2f
+
+    * find the number of remaining tiles to fill leave in d4
+    move.w  d4, d6
+    move.w  #TOTAL_SCREEN_SIZE_TILES, d5
+    subx.w  d6, d5
+
+   * fill remain space
+    subq.w  #1, d5
+
+1:  move.w  #0x00, VDP_DATA_PORT
+    addq.w  #1, d4
+    dbra    d5, 1b
+2:
+
+
     * If the slide pointer is at the end of the slide data then
     * reset it to the beginning - (loop the slides forever)
     lea     SlideDataEnd, a2
@@ -256,6 +304,6 @@ int_null:
 int_hinterrupt:
     rte
 int_vinterrupt:
-    addi.w #1, RAM_VBLANK_COUNTER
+    addq.w #1, RAM_VBLANK_COUNTER
     rte
 rom_end:

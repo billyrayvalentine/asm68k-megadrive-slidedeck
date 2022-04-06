@@ -1,3 +1,6 @@
+.word 672
+.word 0
+
   .word 0x0000
   .word 0x0CEE
   .word 0x08CE
@@ -6062,4 +6065,4 @@
   .long 0x77B7E85E
   .long 0xA7C7A56E
 
-  .asciz "                                PAL H32/V30 (256x240) is used atpresent. Future plans include:  * H40/V30 (320x240) PAL mode    * Support for different image   sizes per slide                 * Different font colours        * Slide animations              * Auto text justify"
+  .asciz "                                NTSC H32/V28 (256x240) is used. Future plans include:           * Different font colours        * Slide animations              * Auto text justify"

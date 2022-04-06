@@ -1,3 +1,5 @@
+.word 672
+.word 0
   .word 0x0000
   .word 0x0CCC
   .word 0x06AC
@@ -6062,4 +6064,4 @@
   .long 0x11111111
   .long 0x11111111
 
-  .asciz "                                by setting SLIDESHOW_MODE_COUNT to a positive value in          globals.asm                     Text for each slide must be of  even length in bytes and        terminated with a zero."
+  .asciz " "
