@@ -42,7 +42,7 @@ Slide header = 4 bytes total
 bytes 00 - 01 = Size of image in images tiles.  Can be set to 0 when no image
 used.
 
-bytes 01 - 02 = unused but must be set.
+bytes 02 - 03 = unused but must be set.
 
 32 bytes that define the colour palette
 
