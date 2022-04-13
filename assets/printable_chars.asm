@@ -1,5 +1,9 @@
 .long 0
-.ascii "All 95 printable ASCII characters are implemented as shown:                                     "
+.ascii "All 95 printable ASCII
+characters are implemented as
+shown:
+
+"
 .byte 0x20
 .byte 0x21
 .byte 0x22
@@ -95,4 +99,5 @@
 .byte 0x7c
 .byte 0x7d
 .byte 0x7e
+.byte 0x20
 .byte 0x00

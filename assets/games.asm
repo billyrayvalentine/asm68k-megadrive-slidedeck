@@ -3602,4 +3602,16 @@
 .long 0xDDDDDDDB
 .long 0x99999999
 
-.asciz "                                Slides can be progressed by     pressing any button on the      control pad, or by setting      SLIDESHOW_MODE_COUNT to a       positive value in globals.asm                                   Text for each slide must be of  even length in bytes and        terminated with a zero."
+.asciz "
+Slides can be progressed by
+pressing any button on the
+control pad, or by setting
+SLIDESHOW_MODE_COUNT to a
+positive value in globals.asm
+
+Text for each slide must be of
+even length in bytes and
+terminated with a zero.
+
+The ASCII Newline characters is
+recognised in slides. "

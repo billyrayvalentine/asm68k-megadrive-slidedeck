@@ -188,11 +188,14 @@ draw_scene:
     * Load the ASCII values from the slide data
     * The tile id for the char is the ASCII code - 0x20
     * Use palette #1
-    * Use d3 to count the total number of titles loaded this slide so we can blank the rest
+    * maintain the column position in D1
+    * Use d4 to count the total number of titles loaded this slide so we can blank the rest
     * of the scene with empty tiles
 
     * if image size == 0, reset VDP address to load at the start of the plane
     * table
+    moveq.l #0, d1
+
     tst     d0
     bne     1f
     move.l  #0x60000003, VDP_CTRL_PORT
@@ -202,13 +205,44 @@ draw_scene:
     * loop through the bytes in a0 which are ascii values until 0x00
 1:  move.b  (a1)+, d0
     tst.b   d0
-    beq     2f
+    beq     4f
 
+    * update column position
+    cmpi.b  #SCREEN_WIDTH_TILE, d1
+    blt     2f
+    moveq.l #0, d1
+
+
+    * If '\n' (0x0A) then insert SCREEN_WIDTH_TILE - column position no. of
+    * blanks tiles
+    * If column position is the already at the end of the line write one blank tile
+2:
+    cmpi.b  #0x0A, d0
+    bne     3f
+    move.w  #SCREEN_WIDTH_TILE-1, d3
+    sub.w   d1, d3
+    21:
+    move.w  #0x00, VDP_DATA_PORT
+    addq.w  #1, d4
+    dbra    d3, 21b
+
+    * Reset the column position
+    moveq.l #0, d1
+    bra 1b
+
+
+    * Write char
+3:
     subi.b  #0x20, d0
     move.w  d0, VDP_DATA_PORT
     addq.w  #1, d4
+    * update column position
+    addq.w  #1, d1
     bra     1b
-2:
+
+    * End
+4:
+
 
     * If total number of tiles written to this scene is less than the screen
     * blank the rest of the screen with tile #0

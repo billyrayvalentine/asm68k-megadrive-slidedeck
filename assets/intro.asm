@@ -6065,4 +6065,7 @@
   .long 0x66666666
   .long 0x66666666
 
-  .asciz "                                Slidedeck for the Sega MegaDrive                                Written by Ben Sampson          <github.com/billyrayvalentine>                                                                  See COPYING for license details"
+  .asciz "
+Slidedeck for the Sega MegaDrive
+Written by Ben Sampson
+<github.com/billyrayvalentine>"

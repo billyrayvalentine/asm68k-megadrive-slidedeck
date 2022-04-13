@@ -6066,4 +6066,9 @@
   .long 0xEEEFB333
   .long 0xEEEFE333
 
-  .asciz "                                This Slidedeck tool is written  in pure 68k assembly.           Each slide can display text and/or a 16 colour image.  "
+  .asciz "
+This Slidedeck tool is written
+in pure 68k assembly.
+Each slide can display text
+and/or a 16 colour image."
+

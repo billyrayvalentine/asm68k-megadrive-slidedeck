@@ -6065,4 +6065,9 @@
   .long 0x77B7E85E
   .long 0xA7C7A56E
 
-  .asciz "                                NTSC H32/V28 (256x240) is used. Future plans include:           * Different font colours        * Slide animations              * Auto text justify"
+  .asciz "
+NTSC H32/V28 (256x240) is used.
+Future plans include:
+* Different font colours
+* Slide animations
+* Auto text justify "

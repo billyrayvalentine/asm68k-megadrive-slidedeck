@@ -6,6 +6,8 @@ Simple engine to display simple slides for presentation.
 Slides can be progressed by setting a timer or by pressing any button on the
 joypad.
 
+Each slide can have an optional picture and optional text.
+
 All 95 printable ASCII are implemented.
 
 Each slide image has one palette on one plane and is therefor limited a maximum
@@ -13,8 +15,7 @@ of 16 colours.
 
 Text is always displayed in white.
 
-This ROM runs in PAL H32/V30 mode (256 x 240).  This gives the best possible vertical
-depth on the megadrive.
+This ROM runs in NTSC H32/V30 mode (256 x 224).
 
 # Configuration
 The engine can be configured to progress slides either by a joypad button press
