@@ -1,0 +1,15 @@
+Ninteen Eighty-Four
+    by
+George Orwell
+
+Part 1 of 3
+
+
+Published for the Sega MegaDrive by Ben Sampson (github.com/BillyRayValentine) 
+using github.com/billyrayvalentine/asm68k-megadrive-slidedeck
+
+This ebook is produced using the Project Guttenberg Australia text. (http://gutenberg.net.au/ebooks01/0100021.txt) 
+
+This ebook is published purely as non-commercial.
+
+This ebook is published in the belief that this text is now no longer copyrighted in at least the UK and Australia.
