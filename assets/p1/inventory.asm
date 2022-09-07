@@ -1,6 +1,4 @@
 SlideDataStart:
-    .include "assets/title.asm"
-    .include "assets/introduction.asm"
 	.include "assets/p1/0.asm"
 	.include "assets/p1/1.asm"
 	.include "assets/p1/2.asm"
@@ -47,5 +45,4 @@ SlideDataStart:
 	.include "assets/p1/43.asm"
 	.include "assets/p1/44.asm"
 	.include "assets/p1/45.asm"
-	.include "assets/p1/46.asm"
 SlideDataEnd:

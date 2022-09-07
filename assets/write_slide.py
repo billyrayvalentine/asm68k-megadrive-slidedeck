@@ -47,6 +47,10 @@ if __name__ == "__main__":
                     if char == '\n' and written_lines+1 == CHUNK_SIZE:
                         continue
 
+                    # Skip the first line if it's blank
+                    #if char == '\n' and written_lines == 0:
+                    #    continue
+
                     hex_byte = ord(char)
                     # Check value has been implemented in slidedeck
                     assert hex_byte >= 0x20 and hex_byte <=0x126 or hex_byte == 0x0 or hex_byte == 0x0A, f"value was 0x{hex_byte:02X} '{chr(hex_byte)}'"
